@@ -1,6 +1,6 @@
 Feature: Karate Test Suite 9
   Reading the payload data from external XML file
-
+#This TestCase is for SOAP API testing
   @soap
   Scenario: Soap API Test Case 1
     Given url "https://www.w3schools.com/xml/tempconvert.asmx"
