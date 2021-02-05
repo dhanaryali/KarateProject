@@ -1,0 +1,51 @@
+<testsuite failures="0" name="src/test/java/featurefiles/KarateTestSuite-12_REST_API.feature" skipped="0" tests="2" time="1.194901">
+  <testcase classname="src.test.java.featurefiles.KarateTestSuite-12_REST_API" name="DDT Test Case 2" time="0.863422">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=37" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match response contains 98.6 ............................................ passed
+* match response //string == 98.6 ......................................... passed
+* match responseHeaders["X-Powered-By"] == [ "ASP.NET" ] .................. passed
+* match responseHeaders["X-AspNet-Version"][0] == "4.0.30319" ............. passed
+* match responseType == "xml" ............................................. passed
+* assert responseTime &lt; 1000 .............................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.featurefiles.KarateTestSuite-12_REST_API" name="DDT Test Case 2" time="0.331479">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=37" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match response contains 98.6 ............................................ passed
+* match response //string == 98.6 ......................................... passed
+* match responseHeaders["X-Powered-By"] == [ "ASP.NET" ] .................. passed
+* match responseHeaders["X-AspNet-Version"][0] == "4.0.30319" ............. passed
+* match responseType == "xml" ............................................. passed
+* assert responseTime &lt; 1000 .............................................. passed
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=40" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match response contains 104 ............................................. passed
+* match response //string == 104 .......................................... passed
+* match responseHeaders["X-Powered-By"] == [ "ASP.NET" ] .................. passed
+* match responseHeaders["X-AspNet-Version"][0] == "4.0.30319" ............. passed
+* match responseType == "xml" ............................................. passed
+* assert responseTime &lt; 1000 .............................................. passed</system-out>
+  </testcase>
+</testsuite>

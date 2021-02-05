@@ -1,0 +1,42 @@
+<testsuite failures="0" name="featurefiles/KarateTestSuite-20_Kafka_1.feature" skipped="0" tests="2" time="0.041973">
+  <testcase classname="featurefiles.KarateTestSuite-20_Kafka_1" name="Getting List of Topics &amp; specific topic" time="0.031995">
+    <system-out>Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/topics" ...................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert responseType == "json" ........................................... passed
+* match response[1] contains "topic" ...................................... passed
+* match response[0] contains "harris" ..................................... passed
+* def topic = response[1] ................................................. passed
+* print topic ............................................................. passed
+Given path "/topics/" + topic ............................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.name == topic ........................................... passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.KarateTestSuite-20_Kafka_1" name="Negative Test Case - non-existing topic" time="0.009978">
+    <system-out>Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/topics" ...................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert responseType == "json" ........................................... passed
+* match response[1] contains "topic" ...................................... passed
+* match response[0] contains "harris" ..................................... passed
+* def topic = response[1] ................................................. passed
+* print topic ............................................................. passed
+Given path "/topics/" + topic ............................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.name == topic ........................................... passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/topics/rest123" .............................................. passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed
+* print response .......................................................... passed
+* match response.message == "This server does not host this topic-partition." . passed</system-out>
+  </testcase>
+</testsuite>
